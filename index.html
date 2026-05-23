@@ -8,16 +8,12 @@
   </head>
   <body>
 
-    <!-- SCREEN 1: Pick a subject -->
+    <!-- SCREEN 1: Type your subject -->
     <div class="container" id="screen1">
       <h1>CatchUp</h1>
       <p>What subject are you struggling with?</p>
-      <div class="subjects">
-        <button onclick="selectSubject('Math')">Math</button>
-        <button onclick="selectSubject('Science')">Science</button>
-        <button onclick="selectSubject('English')">English</button>
-        <button onclick="selectSubject('History')">History</button>
-      </div>
+      <input type="text" id="subject-input" placeholder="e.g. Chemistry, Algebra, Economics..." />
+      <button class="main-btn" onclick="submitSubject()">Continue</button>
     </div>
 
     <!-- SCREEN 2: Pick where you got lost -->
@@ -25,8 +21,17 @@
       <h1 id="screen2-title"></h1>
       <p>Where did things stop making sense?</p>
       <div class="topics" id="topics-list"></div>
+      <button class="back-btn" onclick="goBack()">← Back</button>
+    </div>
+
+    <!-- SCREEN 3: Catch-up plan -->
+    <div class="container hidden" id="screen3">
+      <h1>Your Catch-Up Plan</h1>
+      <div id="plan-output"></div>
+      <button class="back-btn" onclick="goBack2()">← Try another topic</button>
+      <button class="main-btn" onclick="restart()">Start Over</button>
     </div>
 
     <script src="js/app.js"></script>
   </body>
-</html>
+</html> 
