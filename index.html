@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CatchUp</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <!-- SCREEN 1: Pick a subject -->
+    <div class="container" id="screen1">
+      <h1>CatchUp</h1>
+      <p>What subject are you struggling with?</p>
+      <div class="subjects">
+        <button onclick="selectSubject('Math')">Math</button>
+        <button onclick="selectSubject('Science')">Science</button>
+        <button onclick="selectSubject('English')">English</button>
+        <button onclick="selectSubject('History')">History</button>
+      </div>
+    </div>
+
+    <!-- SCREEN 2: Pick where you got lost -->
+    <div class="container hidden" id="screen2">
+      <h1 id="screen2-title"></h1>
+      <p>Where did things stop making sense?</p>
+      <div class="topics" id="topics-list"></div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
